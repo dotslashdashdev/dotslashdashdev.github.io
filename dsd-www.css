@@ -195,7 +195,8 @@
 .dsd-journey .dsd-wide { display: none; }
 @media (min-width: 780px) {
   .dsd-journey { --gutter: clamp(22px, 5.4vw, 98px); --phone-width: min(44.5vw, 820px); }
-  .dsd-journey .dsd-hero { margin-inline: calc(-1 * var(--gutter)); padding-inline: clamp(16px, 2vw, 38px); }
+  /* dotslashdash.com copy (2026-11-02, user): keep the hero inside the masthead rule instead of bleeding past the gutter. */
+  .dsd-journey .dsd-hero { margin-inline: 0; padding-inline: 0; }
   .dsd-journey .dsd-stage {
     grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
     gap: 0;
