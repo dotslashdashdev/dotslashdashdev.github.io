@@ -1,4 +1,4 @@
-export const LAUNCH_AT = "2026-12-02T14:00:00+09:00";  // 매거진 오픈 (사용자 결정 2026-11-03)
+export const LAUNCH_AT = "2026-12-10T17:00:00+09:00";  // 매거진 오픈 (사용자 결정 2026-11-10, 앱 종료 12-09 17:00 다음 날)
 export const LAUNCH_TIMESTAMP = Date.parse(LAUNCH_AT);
 
 // dotslashdash.com copy (2026-11-02): the lab version caps hours at 99, which reads as a
