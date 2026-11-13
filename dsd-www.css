@@ -5,14 +5,6 @@
   font-weight: 100 900;
 }
 
-/* Wordmark face of the ummm.pub magazine masthead (OFL, see unbounded-OFL.txt); subset to its letters. */
-@font-face {
-  font-family: "DSD Unbounded";
-  src: url("./unbounded-750.woff2") format("woff2");
-  font-display: swap;
-  font-weight: 750;
-}
-
 .dsd-journey-body { margin: 0; background: #000; }
 .dsd-journey {
   --ink: #fff;
@@ -76,12 +68,16 @@
 .dsd-journey .dsd-ig-mark {
   display: grid;
   gap: .3em;
-  font: 750 clamp(24px, 7vw, 30px) / 1 "DSD Unbounded", "Archivo", Arial, sans-serif;
-  letter-spacing: -.04em;
-  word-spacing: .035em;
+  font: 800 clamp(24px, 7vw, 30px) / 1 Arial, sans-serif;
   white-space: nowrap;
 }
+/* Same as the ummm.pub masthead since 2026-11-14: the Dot Slash Dash logotype (long_logo.svg)
+   in the magazine yellow, capitals at the old wordmark's height (1.044em box). */
 .dsd-journey .dsd-ig-mark strong { display: flex; align-items: flex-start; gap: .22em; font: inherit; }
+.dsd-journey .dsd-ig-logo { display: block; flex: none; height: 1.044em; width: auto; aspect-ratio: 272 / 32; }
+.dsd-journey .dsd-ig-name {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
 .dsd-journey .dsd-ig-mark > span {
   font: 600 max(11px, .4em) / 1.15 "Journey Pretendard", "Apple SD Gothic Neo", sans-serif;
   letter-spacing: -.02em;
