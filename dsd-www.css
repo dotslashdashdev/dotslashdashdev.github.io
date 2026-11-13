@@ -5,6 +5,14 @@
   font-weight: 100 900;
 }
 
+/* Wordmark face of the ummm.pub magazine masthead (OFL, see unbounded-OFL.txt); subset to its letters. */
+@font-face {
+  font-family: "DSD Unbounded";
+  src: url("./unbounded-750.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 750;
+}
+
 .dsd-journey-body { margin: 0; background: #000; }
 .dsd-journey {
   --ink: #fff;
@@ -55,6 +63,31 @@
   margin-block-end: 20px;
 }
 .dsd-journey h1 span { display: block; }
+/* DSD magazine on Instagram (2026-11-13, user): the ummm.pub magazine masthead, linked out. */
+.dsd-journey .dsd-ig {
+  display: inline-grid;
+  justify-items: start;
+  gap: clamp(14px, 1.4vw, 20px);
+  margin-top: clamp(34px, 4vw, 60px);
+  color: var(--mag-yellow);
+  text-decoration: none;
+}
+.dsd-journey .dsd-ig img { display: block; width: clamp(40px, 3.2vw, 54px); height: auto; }
+.dsd-journey .dsd-ig-mark {
+  display: grid;
+  gap: .3em;
+  font: 750 clamp(24px, 7vw, 30px) / 1 "DSD Unbounded", "Archivo", Arial, sans-serif;
+  letter-spacing: -.04em;
+  word-spacing: .035em;
+  white-space: nowrap;
+}
+.dsd-journey .dsd-ig-mark strong { display: flex; align-items: flex-start; gap: .22em; font: inherit; }
+.dsd-journey .dsd-ig-mark > span {
+  font: 600 max(11px, .4em) / 1.15 "Journey Pretendard", "Apple SD Gothic Neo", sans-serif;
+  letter-spacing: -.02em;
+}
+.dsd-journey .dsd-ig-out { flex: none; width: .52em; height: .52em; margin-top: .02em; transition: transform .2s ease; }
+.dsd-journey .dsd-ig:hover .dsd-ig-out, .dsd-journey .dsd-ig:focus-visible .dsd-ig-out { transform: translate(.08em, -.08em); }
 .dsd-journey .dsd-lede, .dsd-journey .dsd-chapter-heading > p:last-child, .dsd-journey .dsd-mag-copy > p:not(.dsd-cities) {
   color: var(--muted);
   font-size: clamp(16px, 1.4vw, 22px);
@@ -212,6 +245,7 @@
   .dsd-journey .dsd-phone { justify-self: start; }
   .dsd-journey .dsd-hero-copy { align-self: start; padding-top: clamp(30px, 4.5vw, 86px); }
   .dsd-journey h1 { font-size: clamp(48px, 6.4vw, 118px); }
+  .dsd-journey .dsd-ig-mark { font-size: clamp(26px, 2.8vw, 46px); }
   .dsd-journey .dsd-chapter-heading .dsd-kicker { font-size: clamp(10px, .9vw, 14px); }
   .dsd-journey .dsd-chapter-heading h2 { margin-block: 13px 16px; font-size: clamp(39px, 6.4vw, 98px); }
   .dsd-journey .dsd-spread { grid-template-columns: 1.25fr .75fr; gap: clamp(36px, 6vw, 100px); }
@@ -220,6 +254,7 @@
   .dsd-journey .dsd-wide { display: inline; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .dsd-journey .dsd-ig-out { transition: none; }
   .dsd-journey .dsd-text-link span { transition: none; }
   .dsd-journey .dsd-cards { --deck: 1 !important; }
   .dsd-journey .dsd-card { transition: none !important; }
